@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zekr_allah/ui/ahadeth_tab/hadethDetails/hdethDetailsScreen.dart';
 import 'package:zekr_allah/ui/home_page.dart';
 import 'package:zekr_allah/ui/quran_tab/chapter_details.dart';
+import 'package:zekr_allah/ui/style/my_theme_data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,34 +16,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 ////////////////////////////////////////////////////////////////////
-      theme: ThemeData(
-        primaryColor: Color(0xffB7935F) ,
-        colorScheme: ColorScheme.fromSeed(seedColor: Color(0xffB7935F),
-        primary: Color(0xffB7935F),
-              onPrimary: Colors.white,
-          secondary: Color(0x90B7935F),
-            onSecondary: Colors.black,
+      theme:myThemeData.lightTheme,
+      darkTheme: myThemeData.darkTheme,
 
-        ),
+       themeMode: ThemeMode.light,
 
 
 
-
-        
-        appBarTheme: AppBarTheme(backgroundColor: Colors.transparent,centerTitle: true,
-            titleTextStyle: TextStyle(fontWeight:FontWeight.bold,color: Colors.black,fontSize: 30 )),
-
-        scaffoldBackgroundColor: Colors.transparent,
-
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          selectedIconTheme: IconThemeData(
-            color: Colors.black,size:30.0,
-          ),
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.white,
-        )
-
-      ),
 //////////////////////////////////////////////////////////////////////
     routes: {
         ChapterDetailsScreen.routeName : (context) => ChapterDetailsScreen(),
