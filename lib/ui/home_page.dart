@@ -63,20 +63,20 @@ class _HomePageState extends State<HomePage> {
 
          backgroundColor:Color(0xffB7935F),
          items: [
-           BottomNavigationBarItem(         backgroundColor:Color(0xffB7935F),
+           BottomNavigationBarItem(         backgroundColor:Theme.of(context).primaryColor      ,
                icon: ImageIcon(AssetImage("assets/images/quran_icn.png")),label: "Quran"),
 
-           BottomNavigationBarItem(         backgroundColor:Color(0xffB7935F),
+           BottomNavigationBarItem(         backgroundColor:Theme.of(context).primaryColor,
                icon: ImageIcon(AssetImage("assets/images/quran-quran-svgrepo-com.png")),label: "Ahadeth"),
 
-           BottomNavigationBarItem(         backgroundColor:Color(0xffB7935F),
+           BottomNavigationBarItem(         backgroundColor:Theme.of(context).primaryColor,
                icon: ImageIcon(AssetImage("assets/images/sebha.png")),label: "Tasbeh"),
 
-         BottomNavigationBarItem(         backgroundColor:Color(0xffB7935F),
+         BottomNavigationBarItem(         backgroundColor:Theme.of(context).primaryColor,
              icon: ImageIcon(AssetImage("assets/images/radio.png")),label: "radio"),
 
 
-         BottomNavigationBarItem(         backgroundColor:Color(0xffB7935F),
+         BottomNavigationBarItem(         backgroundColor:Theme.of(context).primaryColor,
              icon: Icon(Icons.settings),label: "Settings"),
 
 
