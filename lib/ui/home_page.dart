@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:zekr_allah/providers/setting_provider.dart';
 import 'package:zekr_allah/ui/ahadeth_tab/ahadeth_widget.dart';
 import 'package:zekr_allah/ui/quran_tab/quran_tab.dart';
 import 'package:zekr_allah/ui/radio_tab/RadioTab.dart';
@@ -26,13 +28,24 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+    settingProvider provider = Provider.of<settingProvider>(context);
+
     return Container(
 
 
 
 
       decoration: BoxDecoration(
-        image: DecorationImage(image: AssetImage("assets/images/bgall.png"),fit: BoxFit.fill)
+        image: DecorationImage(image: AssetImage(
+
+          provider.currentTheme ==  ThemeMode.light
+              ?"assets/images/bgall.png"
+              : "assets/images/home_dark_background.png"                 ),
+
+
+
+            fit: BoxFit.fill)
       ),
 
       child: Scaffold(
